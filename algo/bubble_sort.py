@@ -1,5 +1,6 @@
 # Implements bubble sort in python
 
+
 def bubble_sort(arr):
         for i in range(len(arr)):
             for j in range(0, len(arr) - i - 1):
@@ -10,4 +11,5 @@ def bubble_sort(arr):
         return arr
 
 # Time complexity O(n2)
-# 
+# best case: O(n)
+# Average case = worst case = O(n2)

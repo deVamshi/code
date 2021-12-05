@@ -1,0 +1,231 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"no",
+				"noOfZeroes"
+			],
+			[
+				"Abor",
+				"AbortError"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"python",
+				"Build With: Python"
+			],
+			[
+				"pythn",
+				"Build With: Python"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: p",
+				"Package Control: Discover Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:d",
+				"Package Control: Disable Package"
+			],
+			[
+				"dart",
+				"Dart: Format"
+			],
+			[
+				"Install Package Control",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 342.0,
+		"history":
+		[
+			"python3 test.py",
+			"ls",
+			"python3 test.py",
+			"python test.py",
+			"python",
+			"pwd"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/T. Vamshidhar/Desktop/fullscreen-drag-slider-with-parallax/dist/script.js",
+		"/C/Users/T. Vamshidhar/Desktop/programming-langugages-api/routes/programmingLanguages.js",
+		"/C/Users/T. Vamshidhar/Desktop/programming-langugages-api/services/programmingLanguages.js",
+		"/D/Web/cooking-ninja/package.json",
+		"/C/Users/T. Vamshidhar/Desktop/cp/test.py",
+		"/C/Users/T. Vamshidhar/Desktop/test.py",
+		"/C/Users/T. Vamshidhar/Desktop/useFetch.js",
+		"/C/Users/T. Vamshidhar/Desktop/subC.cpp",
+		"/C/Users/T. Vamshidhar/Desktop/subC",
+		"/C/Users/T. Vamshidhar/Desktop/yes",
+		"/C/Users/T. Vamshidhar/AndroidStudioProjects/Connected/lib/DatabaseMethods/auth.dart",
+		"/C/Users/T. Vamshidhar/AndroidStudioProjects/Connected/lib/Screens/main_screen.dart",
+		"/C/Users/T. Vamshidhar/AndroidStudioProjects/Connected/lib/Screens/home.dart",
+		"/C/Users/T. Vamshidhar/AndroidStudioProjects/Connected/build/app/intermediates/incremental/debug-mergeNativeLibs/zip-cache/TETJrUoME1aLidpmMFVq6FyL4YI=",
+		"/C/Users/T. Vamshidhar/Desktop/sub.py"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "FINAL450.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"build\\app\\intermediates\\incremental\\debug-mergeNativeLibs\\zip-cache\\TETJrUoME1aLidpmMFVq6FyL4YI="
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 262.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
