@@ -1,3 +1,7 @@
+# input: infosys#337 output: -1
+# input: hello@81@21349 output: 984312
+# finds the largest even number from the given input, If not found prints -1
+
 inp = input()
 isEvenFound = False
 minEven = float('infinity')
