@@ -1,4 +1,4 @@
-string = "abasijeorjwiegwjijrffffff"
+string = "abasijeorjwiegwjijr"
 has = {}
 for i in string:
     if i in has:
@@ -7,13 +7,14 @@ for i in string:
         has[i] = 1
 freqList = sorted(has.items(), key=lambda kv: (kv[1], kv[0]), reverse=True)
 
-for i in range(len(freqList)):
-    freqList[i] = list(freqList[i])
+freqList = list(map(list, freqList))
 
 loopingCount = 0
 if len(freqList) >= 1:
     loopingCount = freqList[0][1]
+
 out = " "
+
 notPossible = False
 for i in range(loopingCount):
     for itemSet in freqList:
