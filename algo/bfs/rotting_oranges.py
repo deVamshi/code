@@ -6,8 +6,6 @@ class Solution:
     def orangesRotting(self, grid) -> int:
         # Just a check
         if grid == None or len(grid) == 0: return 0
-        # To store visited places
-        visited = []
         fresh_oranges = 0
         # Changed oranges mean, How many oranges we have rottened
         changed_oranges = 0
@@ -38,14 +36,10 @@ class Solution:
                     x = xPos + dx[j]
                     y = yPos + dy[j]
                     if x < 0 or y < 0 or x >= m or y >= n or grid[x][y] == 2 or grid[x][y] == 0: continue
-                    freshOrLoc = [x, y]
-                    if freshOrLoc not in visited:
-                        # if the location is not visited only then check it
-                        # once that is done add it to visited place
-                        # everytim you rotten an orange change increase the count
-                        q.append(freshOrLoc)
-                        visited.append(freshOrLoc)
-                        changed_oranges += 1
+                    # rot the current fresh orange and append increase the count
+                    grid[x][y] = 2
+                    q.append([x, y])
+                    changed_oranges += 1
                     
                 
             # if q is not yet empty then it took 1 min to rotten the prev
