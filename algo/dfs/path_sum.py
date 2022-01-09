@@ -9,8 +9,9 @@
 
 # Do a dfs search on the tree and keep adding the current node val
 # Inorder traversal
+
 class Solution:
-    def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+    def hasPathSum(self, root, targetSum: int) -> bool:
         
         def dfs(node, curSum):
             if not node: return False
