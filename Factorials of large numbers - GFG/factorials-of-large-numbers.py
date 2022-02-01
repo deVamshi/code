@@ -7,12 +7,9 @@ class Solution:
             if n < 2:
                 return 1
             else:
-                if n in memo:
-                    return memo[n]
-                else:
+                if n not in memo:
                     memo[n] = n * fact(n - 1)
-                    return memo[n]
-                    
+                return memo[n]
     
         return [fact(N)]
         
