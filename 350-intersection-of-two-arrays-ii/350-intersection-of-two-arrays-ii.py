@@ -1,15 +1,14 @@
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
         out = []
-        short, long = sorted([nums1, nums2], key=len)
-    
-        for ele in short:
-            for ind, same in enumerate(long):
-                if same == ele:
-                    out.append(ele)
-                    long[ind] = "shit"
-                    break
+        freq = {}
+        
+        for ele in nums1:
+            freq[ele] = freq.get(ele, 0) + 1
                 
-                
+        for ele in nums2:
+            if ele in freq and freq[ele] > 0:
+                out.append(ele)
+                freq[ele] -= 1
         return out
         
