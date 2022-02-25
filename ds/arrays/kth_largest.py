@@ -9,17 +9,17 @@ k = 2
 pq = []
 
 for num in arr:
-    print('pushing ', num)
+    # print('pushing ', num)
     heapq.heappush(pq, num)
-    print("current pq is ",pq)
+    # print("current pq is ",pq)
     if len(pq) > k:
-        print("Length is greate than k, so poppping out")
+        # print("Length is greate than k, so poppping out")
         ele = heapq.heappop(pq)
-        print("popped", ele)
-        print("Now heap is ", pq)
+        # print("popped", ele)
+        # print("Now heap is ", pq)
 
-print("out of for loop")
-print(heapq.heappop(pq))
+# print("out of for loop")
+# print(heapq.heappop(pq))
 
 # Sol using sorting
 class Solution:

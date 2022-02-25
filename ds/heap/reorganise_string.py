@@ -60,6 +60,8 @@ class SolutionTwo:
 
         if len(maxHeap) != 0:
             count, char = heapq.heappop(maxHeap)
+            # If we still have multiple chars, then it is not possible to form the desired string
+            # so returning a empty string as stated in the question
             if -count > 1:
                 return ""
             else:
