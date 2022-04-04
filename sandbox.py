@@ -184,52 +184,55 @@
 #     count = nume / denom
 #     ans += int(count)
 # return 
+from datetime import timedelta, date
+import calendar
+inp = "20211201"
 
-aMap = {}
-bMap = {}
-trans = {
-    'a': 'd',
-    'd': 'c'
-}
- 
-def lcs(str1, str2, m, n):
- 
-    L = [[0 for i in range(n + 1)]
-         for i in range(m + 1)]
- 
-    for i in range(m + 1):
-        if i < m: aMap[str1[i]] = 1
-        for j in range(n + 1):
-            if j < n: bMap[str2[j]] = 1
-            if (i == 0 or j == 0):
-                L[i][j] = 0
-            elif(str1[i - 1] == str2[j - 1]):
-                L[i][j] = L[i - 1][j - 1] + 1
-            else:
-                L[i][j] = max(L[i - 1][j],
-                              L[i][j - 1])
- 
-    return L[m][n]
+inp, givenWeekday, n = list(input().split(" "))
+n = int(n)
+year = int(inp[0:4])
+month = int(inp[4:6])
+day = int(inp[6:])
+givenWeekday = givenWeekday.lower()
+def is_prime(n):
+  if n == 2 or n == 3: return True
+  if n < 2 or n%2 == 0: return False
+  if n < 9: return True
+  if n%3 == 0: return False
+  r = int(n**0.5)
+  f = 5
+  while f <= r:
+    if n % f == 0: return False
+    if n % (f+2) == 0: return False
+    f += 6
+  return True
 
-def printMinDelAndInsert(str1, str2):
-    m = len(str1)
-    n = len(str2)
-    leng = lcs(str1, str2, m, n)
-    out = 0
-    cost = 20
-    minInsertions = n - leng
-    print(minInsertions)
-    for i in trans.keys():
-        if i in aMap and trans[i] in bMap:
-            out += 1
-            minInsertions -= 1
-    out += cost * minInsertions
-    print(out)
+dateGiven = date(year, month, day)
+found = False
+i = 1
+came = False
+while True:
+    if givenWeekday == calendar.day_name[dateGiven.weekday()][0:3].lower():
+        print("NO", 0)
+        break
+    if is_prime(i):
+        updatedDate = date(year, month, day) + timedelta(days=i)
 
-printMinDelAndInsert('ab', 'cb')
+        if calendar.day_name[updatedDate.weekday()][0:3].lower() == givenWeekday: came = True
 
-print(aMap)
-print(bMap)
+        if is_prime(updatedDate.month):
+            found = True
+    if found: break
+    if came: i += 7
+    else: i += 1
+
+if found: print("YES" if i <= n else "NO", i)
+
+
+
+
+
+ 
 
 
 
