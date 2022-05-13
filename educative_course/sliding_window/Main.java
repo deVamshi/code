@@ -1,23 +1,36 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-
-class Solution {
-    public static double[] solve(int k, double[] nums){
-        double[] result = new double[nums.length];
-        for(int i = 0; i <= nums.length - k; i++){
-            double sum = 0;
-           for(int j = i; j < i + k; j++){
-              sum += nums[j];
-           }
-           result[i] = sum;
-        }
-        System.out.println(Arrays.toString(result));
-    }
-}
 
 class Main {
+
+    public boolean colorInDfs(int node,  ArrayList<ArrayList<Integer>> adj, int[] color){
+        return true;
+    }
+
+    boolean checkDFS(ArrayList<ArrayList<Integer>> adj, int n){
+        int color[] = new int[n];
+        for(int i = 0; i < n; i++){
+            color[i] = -1;
+        }
+        for(int it : color){
+            if(it == -1) {
+               if(!colorInDfs(it, adj, color)) return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String args[]){
-        Solution.solve(5, new int[]{2,4,5,6,7,8,9,2});
+        int noOfNodes = 7;
+
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+
+        for(int i = 0; i < noOfNodes; i++){
+            adj.add(new ArrayList<>());
+        }
+
+        Main inst = new Main();
+
+        System.out.println(inst.checkDFS(adj, noOfNodes));
     }
 }
 
