@@ -8,7 +8,6 @@ public:
         
         while(left <= right){
             while( left <= right && !isalpha(s[left]) && !isdigit(s[left])) left++;
-            if(left > right) break;
             while(right >= left && !isalpha(s[right]) && !isdigit(s[right])) right--;
             if(right < left) break;
             if(s[left++] != s[right--]) return false;
