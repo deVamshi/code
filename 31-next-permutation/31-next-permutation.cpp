@@ -16,11 +16,9 @@ public:
         if (i > -1){
             int ind;
             for(ind = nums.size() - 1; ind > i; ind--){
-                if(nums[ind] > nums[i]){
-                    swap(nums[ind], nums[i]);
-                    break;
-                }
+                if(nums[ind] > nums[i]) break;
             }
+            swap(nums[i], nums[ind]);
         }
         reverse(nums.begin() + i + 1, nums.end());
     }
