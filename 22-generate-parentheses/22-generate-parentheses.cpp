@@ -1,7 +1,7 @@
 class Solution {
 public:
     
-    void f(int n, int open,int close, string &curr, vector<string> &ans) {
+    void f(int &n, int &open,int &close, string &curr, vector<string> &ans) {
         
          if(open == n && close == n) {
              ans.push_back(curr);
@@ -10,13 +10,17 @@ public:
           
          if(open < n) {
              curr += "(";
-             f(n, open + 1, close, curr, ans);
+             open++;
+             f(n, open, close, curr, ans);
              curr.pop_back();
+             open--;
          } 
         
          if(close < open) {
              curr += ")";
-             f(n, open, close + 1, curr, ans);
+             close++;
+             f(n, open, close, curr, ans);
+             close--;
              curr.pop_back();
          }
     }
@@ -24,7 +28,8 @@ public:
     vector<string> generateParenthesis(int n) {
         vector<string> ans;
         string curr;
-        f(n, 0, 0, curr, ans);
+        int open = 0, close = 0;
+        f(n, open, close, curr, ans);
         return ans;
     }
 };
