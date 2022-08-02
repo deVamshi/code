@@ -15,7 +15,9 @@ class Solution {
 public:
     void invert(TreeNode *node){
         if(!node) return;
-        swap(node -> left, node -> right);
+        TreeNode *temp = node -> left;
+        node -> left = node -> right;
+        node -> right = temp;
         invert(node -> left);
         invert(node -> right);
     }
