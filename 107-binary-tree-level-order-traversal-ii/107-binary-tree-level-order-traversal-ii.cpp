@@ -12,21 +12,23 @@
 class Solution {
 public:
     
-    
     void f(TreeNode* node, vector<vector<int>> &ans, int level){
         if(!node) return;
-        if(level == ans.size()) {ans.push_back(vector<int>());}
         ans[level].push_back(node -> val);
-        f(node -> left, ans, level + 1);
-        f(node -> right, ans, level + 1);
+        f(node -> left, ans, level - 1);
+        f(node -> right, ans, level - 1);
     }
     
+    int depth(TreeNode *node){
+        if(!node) return 0;
+        return 1 + max(depth(node -> left), depth(node -> right));
+    } 
     
     vector<vector<int>> levelOrderBottom(TreeNode* root) {
-        vector<vector<int>> ans;
-        if(!root) return ans;
-        f(root, ans, 0);
-        reverse(ans.begin(), ans.end());
+        if(!root) return vector<vector<int>>();
+        int d = depth(root); 
+        vector<vector<int>> ans(d, vector<int> {}) ;
+        f(root, ans, d - 1);
         return ans;
     }
 };
