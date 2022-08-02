@@ -15,21 +15,18 @@ public:
         
         vector<int> ans;
         
-        if(!root) return ans;
-        
         stack<TreeNode*> st;
         
         st.push(root);
         
-        while(!st.empty()){
-            
+        while(!st.empty()) {
             TreeNode *node = st.top();
             st.pop();
-            ans.push_back(node -> val);
-            if(node -> right)
-            st.push(node -> right);
-            if(node -> left)
-            st.push(node -> left);
+            if(node) {
+                ans.push_back(node -> val);
+                st.push(node -> right);
+                st.push(node -> left);    
+            }
         }
         
         return ans;
