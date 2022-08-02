@@ -11,7 +11,6 @@
  */
 class Solution {
 public:
-    
     void f(TreeNode* node, vector<vector<int>> &ans){
         
         queue<TreeNode*> q;
@@ -35,7 +34,6 @@ public:
         vector<vector<int>> ans;
         if(!root) return ans;
         f(root, ans);
-        reverse(ans.begin(), ans.end());
-        return ans;
+        return vector<vector<int>>(ans.rbegin(), ans.rend());
     }
 };
