@@ -11,22 +11,10 @@
  */
 class Solution {
 public:
-    void search(TreeNode *node,int val,TreeNode *&ans) {
-        if(!node) return;
-        
-        if(node -> val == val) {
-            ans = node;
-            return;
-        };
-        
-        if(node -> val < val) search(node -> right, val, ans);
-        else search(node -> left, val, ans);
-    }
-    
-    
     TreeNode* searchBST(TreeNode* root, int val) {
-       TreeNode* ans = NULL;
-       search(root, val, ans); 
-       return ans;
+       while(root && root -> val != val){
+           root = root -> val < val ? root -> right : root -> left;
+       }
+       return root;
     }
 };
