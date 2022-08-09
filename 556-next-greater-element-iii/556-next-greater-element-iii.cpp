@@ -28,7 +28,7 @@ public:
             }
         }
         
-        sort(s.begin() + i + 1, s.end());
+        reverse(s.begin() + i + 1, s.end());
         
         cout << s << endl;
         
