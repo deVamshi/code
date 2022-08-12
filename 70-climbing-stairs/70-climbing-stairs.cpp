@@ -1,15 +1,17 @@
 class Solution {
 public:
-    int cs(int n, unordered_map<int, int> &dp){
-        if(dp.find(n) != dp.end()) return dp[n];
-        if(n <= 0) return 0;
-        else if(n <= 2) return n;
-        else return dp[n] = cs(n - 1, dp) + cs(n - 2, dp);
+    
+    int f(int ind, vector<int> &dp) {
         
+        if(ind <= 1) return 1;
+        if(dp[ind] != -1) return dp[ind];
+        
+        return dp[ind] = f(ind - 1, dp) + f(ind - 2, dp);
     }
     
     int climbStairs(int n) {
-        unordered_map<int, int> dp;
-        return cs(n, dp);
+       vector<int> dp(n + 1, -1); 
+        
+       return f(n, dp);
     }
 };
